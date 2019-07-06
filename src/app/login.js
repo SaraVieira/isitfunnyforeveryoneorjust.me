@@ -3,7 +3,7 @@ import { navigate } from 'gatsby'
 import { handleLogin, isLoggedIn } from './services/auth'
 
 class Login extends React.Component {
-  handleSubmit = () => handleLogin(user => navigate(`/app/profile`))
+  handleSubmit = () => handleLogin(user => navigate(`/profile`))
   render() {
     return (
       <>

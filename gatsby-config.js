@@ -25,7 +25,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
+      options: { prefixes: [`/*`] },
     },
     {
       resolve: `gatsby-source-filesystem`,

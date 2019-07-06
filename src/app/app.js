@@ -12,9 +12,9 @@ const App = () => {
     <Layout>
       <NavBar />
       <Router>
-        <PrivateRoute path="/app/profile" component={Profile} />
-        <PublicRoute path="/app">
-          <PrivateRoute path="/" component={Main} />
+        <PrivateRoute path="/profile" component={Profile} />
+        <PublicRoute path="/">
+          <PrivateRoute path="/private" component={Main} />
           <Login path="/login" />
         </PublicRoute>
       </Router>
