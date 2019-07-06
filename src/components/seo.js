@@ -17,6 +17,12 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            script={[
+              {
+                src:
+                  'https://identity.netlify.com/v1/netlify-identity-widget.js',
+              },
+            ]}
             meta={[
               {
                 name: `description`,

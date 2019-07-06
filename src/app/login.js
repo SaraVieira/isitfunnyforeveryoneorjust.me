@@ -2,16 +2,15 @@ import React from 'react'
 import { navigate } from 'gatsby'
 import { handleLogin, isLoggedIn } from './services/auth'
 
-class Login extends React.Component {
-  handleSubmit = () => handleLogin(user => navigate(`/profile`))
-  render() {
-    return (
-      <>
-        <h1>Log in</h1>
-        <button onClick={this.handleSubmit}>log in</button>
-      </>
-    )
-  }
+const Login = () => {
+  const handleSubmit = () => handleLogin(user => navigate(`/profile`))
+
+  return (
+    <>
+      <h1>Log in</h1>
+      <button onClick={handleSubmit}>log in</button>
+    </>
+  )
 }
 
 export default Login

@@ -13,16 +13,12 @@ const App = () => {
       <NavBar />
       <Router>
         <PrivateRoute path="/profile" component={Profile} />
-        <PublicRoute path="/">
-          <PrivateRoute path="/private" component={Main} />
-          <Login path="/login" />
-        </PublicRoute>
+        <PrivateRoute path="/private" component={Main} />
+        <Main path="/" component={Main} />
+        <Login path="/login" />
       </Router>
     </Layout>
   )
-}
-function PublicRoute(props) {
-  return <div>{props.children}</div>
 }
 
 export default App
